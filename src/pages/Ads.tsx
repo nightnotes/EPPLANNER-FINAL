@@ -5,9 +5,12 @@ export default function Ads(){
   return (
     <div>
       <Navbar />
-      <div className="max-w-4xl mx-auto px-4 pt-6">
-        <h1 className="text-2xl font-semibold mb-4">Advertentiebeheer</h1>
-        <div className="card p-6 text-nn_muted">Kosten, ROAS en links. (Coming soon)</div>
+      <div className="max-w-6xl mx-auto px-4 pt-6 space-y-4">
+        <h1 className="text-2xl font-semibold">Advertentiebeheer</h1>
+        <div className="card p-6">
+          <p className="mb-4 text-nn_muted">Ga naar Meta Ads manager.</p>
+          <a className="btn-primary" href="https://business.facebook.com/adsmanager/manage/campaigns?global_scope_id=1588689962026120" target="_blank" rel="noreferrer">Open Ads Manager</a>
+        </div>
       </div>
     </div>
   )
