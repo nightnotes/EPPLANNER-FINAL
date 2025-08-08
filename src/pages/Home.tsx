@@ -4,12 +4,14 @@ import ReleasesTable from '../components/ReleasesTable'
 import { generateSchedule } from '../utils/schedule'
 
 export default function Home() {
-  const rows = generateSchedule(new Date("2025-08-25"), new Date("2026-12-31"))
+  const start = new Date() // vandaag
+  const end = new Date(); end.setDate(end.getDate() + 44) // 45 dagen window
+  const rows = generateSchedule(start, end)
   return (
     <div>
       <Navbar />
       <div className="max-w-6xl mx-auto px-4 pt-6">
-        <h1 className="text-2xl font-extrabold mb-4">Releaseschema t/m 31-12-2026</h1>
+        <h1 className="text-2xl font-semibold mb-4">Releaseschema (volgende 45 dagen)</h1>
         <ReleasesTable rows={rows} />
       </div>
     </div>
